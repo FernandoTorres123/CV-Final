@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(38, 81, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    max-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 8% 3fr;
+    grid-template-areas:
+        "left right"
+        "nav nav"
+        "left-info right-info"
+        "footer footer";
+    box-shadow: 0 35px 55px rgba(41, 38, 38, 0.1);
+}
+
+.infoContac {
+    grid-area: nav;
+    position: relative;
+    background-color: orange;
+    width: 100%;
+    max-width: 1300px;
+    max-height: 200px;
+    padding: 20px 70px;
+    display: grid;
+    grid-template-areas: "phone email home";
+}
+
+.infoContac img {
+    align-items: center;
+}
+
+.phoneInfo {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    grid-area: phone;
+}
+
+.emailInfo {
+    grid-area: email;
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+.homeInfo {
+    grid-area: home;
+    height: 50px;
+    /* padding-right: 15px; */
+    align-items: center;
+    display: flex;
+    /* font-size: 2.1em; */
+
+}
+
+
+.image-left-side {
+    grid-area: left;
+    position: relative;
+    background: #202124;
+    padding: 40px;
+}
+
+.name-right-side {
+    grid-area: right;
+    position: relative;
+    background: white;
+    padding: 40px 10px;
+}
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.cvImg {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 0.5px solid white;
+    /* border-radius: 50%; */
+    overflow: hidden;
+}
+
+.cvImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileName {
+    color: rgb(31, 31, 31);
+    background-color: #fff;
+    font-size: 2.1em;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileName h3 {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.left-side-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #202124;
+    color: white;
+    grid-area: left-info;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border-top: 0.5px solid white; */
+    font-size: 1.5ex;
+}
+
+.education p {
+    padding-bottom: 10px;
+}
+
+.education-tittle {
+    position: relative;
+    align-items: center;
+
+}
+
+.software {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border-top: 0.5px solid white; */
+    font-size: 1.5ex;
+}
+
+.software-tittle {
+    position: relative;
+    align-items: center;
+
+}
+
+.software-list {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border-top: 0.5px solid white; */
+    font-size: 1.5ex;
+}
+
+.languages-tittle {
+    position: relative;
+    align-items: center;
+
+}
+
+.languages p {
+    padding-bottom: 10px;
+}
+
+.right-side-info {
+    grid-area: right-info;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width:770px) {
+
+    .infoContac{
+        font-size: 1.5ex;
+    }
+
+    .work {
+        display: grid;
+        grid-template-areas:
+            "tittle tittle"
+            "date2 work-info2"
+            "work-text2 work-text2"
+            "date1 work-info1"
+            "work-text1 work-text1"
+            "date work-info"
+            "work-text work-text"
+        ;
+    }
+
+    /* .date {
+        grid-area: date;
+    }
+
+    .work-info {
+        grid-area: work-info;
+    }
+
+    .work-text-info{
+        grid-area: work-text;
+    }
+
+    .date1 {
+        grid-area: date1;
+    }
+
+    .work-info1 {
+        grid-area: work-info1;
+    }
+
+    .work-text-info1{
+        grid-area: work-text1;
+    } */
+    .date2 {
+        grid-area: date2;
+    }
+
+    .work-info2 {
+        grid-area: work-info2;
+    }
+
+    .work-text-info2{
+        grid-area: work-text2;
+    }
+}
+
+.work {
+    display: grid;
+    grid-template-areas:
+        "tittle tittle"
+        "date2 work-info2"
+        "date1 work-info1"
+        "date work-info"
+    ;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.work-tittle {
+    grid-area: tittle;
+}
+
+.date {
+    grid-area: date;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 115px;
+    height: 100%;
+    max-height: 70px;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+.first-date {
+    padding-bottom: 10px;
+}
+
+.work-info {
+    grid-area: work-info;
+    padding-left: 35px;
+    padding-bottom: 20px;
+}
+
+.date1 {
+    grid-area: date1;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 115px;
+    height: 100%;
+    max-height: 80px;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+.work-info1 {
+    grid-area: work-info1;
+    padding-left: 35px;
+    padding-bottom: 20px;
+}
+
+.date2 {
+    grid-area: date2;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 115px;
+    height: 100%;
+    max-height: 70px;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+.work-info2 {
+    grid-area: work-info2;
+    padding-left: 35px;
+    padding-bottom: 20px;
+}
+
+.work-text-info {
+    padding-top: 10px;
+    font-size: 1rem;
+}
+.work-text-info1 {
+    padding-top: 10px;
+    font-size: 1rem;
+}
+.work-text-info2 {
+    padding-top: 10px;
+    font-size: 1rem;
+}
