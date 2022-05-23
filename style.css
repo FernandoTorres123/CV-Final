@@ -95,7 +95,7 @@ body {
     color: #fff;
 }
 
-.cvImg {
+.image-profile {
     position: relative;
     width: 200px;
     height: 200px;
@@ -104,7 +104,7 @@ body {
     overflow: hidden;
 }
 
-.cvImg img {
+.image-profile img {
     position: absolute;
     top: 0;
     left: 0;
